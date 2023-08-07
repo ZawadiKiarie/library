@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #61677A;
+  position: relative;
+}
+
+.header-ctn {
+  background-color: #D8D9DA;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-ctn div {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.new-book {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #272829;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.new-book:hover {
+  transform: translateY(-5px);
+}
+
+.cards-ctn {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  gap: 20px;
+}
+
+/* .book-popup {
+  position: relative; 
+  width: 100%;
+} */
+
+/* .form-popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-5%);
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 9;
+} */
+
+.form-container {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+
+.form-container input[type=text],
+.form-container input[type=number] {
+  width: 100%;
+  padding:15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+  display: block;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form-container input[type=text]::placeholder,
+.form-container input[type=number]::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+} 
+
+.form-container input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+.read-ctn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+ label {
+  display: none;
+}
+
+label[for=read] {
+  display: inline;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #272829;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.form-container button:hover {
+  opacity: 1;
+}
+
+.form-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-btn {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgrey;
+}
+
+.close-btn:hover {
+  background-color: darkgrey;
+}
+
+/* classes added in JS */
+.book-card {
+  background-color: #D8D9DA;
+  padding: 20px;
+}
