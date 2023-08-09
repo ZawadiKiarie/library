@@ -43,7 +43,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
-  gap: 20px;
+  gap: 27px;
+  position: relative;
 }
 
 /* .book-popup {
@@ -186,4 +187,80 @@ label[for=read] {
 .book-card {
   background-color: #D8D9DA;
   padding: 20px;
+  width: 280px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.book-author,
+.book-pages {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.green-book-status,
+.red-book-status,
+.book-remove-btn {
+  display: block;
+  text-align: center;
+  border: none;
+  font-weight: 600;
+  background-color: #272829;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-remove-btn:hover {
+  background-color: #47494a;
+}
+
+.green-book-status {
+  margin-bottom: 12px;
+  background-color: #94AF9F;
+}
+
+.green-book-status:hover {
+  background-color: #7e9688;
+}
+
+.red-book-status {
+  margin-bottom: 12px;
+  background-color: #CD6688;
+}
+
+.red-book-status:hover {
+  background-color: #ae5774;
+}
+
+.empty-tag-header {
+  position: absolute;
+  color: black;
+  font-size: 1.9rem;
+  font-weight: 700;
+  top: 120px;
+  left: 300px;
+}
+
+.empty-tag-para {
+  position: absolute;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  top: 190px;
+  left: 300px;
 }
